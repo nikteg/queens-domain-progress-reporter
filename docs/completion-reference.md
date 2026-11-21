@@ -51,7 +51,7 @@ checks.
 | Items | Extensive Armaments | Every main weapon | 77 | TotalAchievementWeapons |
 | Items | Versatile Volley | Every throwing weapon type | 22 | TotalAchievementThrowables |
 | Items | Eclectic Accoutrements | Every accessory | 33 | TotalAchievementAccessories |
-| Items | Glimmering Treasures | Every treasure (59 unique + 34 loot sacks) | 93 | TotalAchievementTreasures |
+| Items | Glimmering Treasures | 93 treasures; every loot sack counts too | 93 | TotalAchievementTreasures |
 | Items | Overflowing Energy | Full Energy Cells | 4 | FullEnergyCellsCount |
 | Items | Magic Eyes | 4 lenses for the Mask of Second Sight | 4 | items RuneVisionUnlock1–4 |
 | Items | Ancient Technology | Any energy weapon | 1 | tag EnergyWeapon |
@@ -75,14 +75,19 @@ checks.
 
 Item totals match the item tags in the game files exactly (77 items tagged `AchievementWeapon`, 33
 `AchievementAccessory`, 22 `AchievementThrowables`). An item counts once it has been in your inventory, even if you
-later sold it.
+later sold it. Four of the 33 accessories are the skull-door fossils (see Silver Skulls), stored under `Artifacts/`
+rather than `Items/` in the game files.
+
+Treasures: there are 59 unique treasures, and every loot sack (Lizer treasure) you find also adds one to the
+treasure counter. Loot sacks can be found more than once (some enemies drop them), so the 93 can be reached with
+any mix of unique treasures and sacks.
 
 | Collection | Total |
 | --- | --- |
 | Main weapons | 77 |
 | Throwing weapons | 22 |
 | Accessories | 33 |
-| Treasures | 93 (59 unique + 34 loot sacks) |
+| Treasures | 93 (59 unique, the rest loot sacks) |
 | Crystal Monuments | 32 |
 | Wing Altars | 10 |
 | Chests | 108 |
@@ -123,20 +128,20 @@ a ritual at 69. Rewards count skulls **turned in**, not carried.
 
 Read from `NPCs/SecretSkullDoor/SecretSkullDoor_NPC_BP` (`RewardList`):
 
-| Turned in | Reward | Effect (in-game text) |
+| Turned in | Reward | Effect (from the item's data) |
 | --- | --- | --- |
 | 10 | Ancient Stone Duck Figurine | The 5th duck for Umbada; completes A Fine Collection and opens his last shop tier |
-| 20 | Fossilized Fish | "Holding it close seems to fill your belly a bit" |
-| 30 | Flying Mushroom Fossil | Propels you up through the air; unlocks *Oh the Places You'll Go* |
-| 40 | Fossilized Anemone | Guides you out of dangerous waters before injury |
-| 50 | Sonic Crystal Fossil | Speed ("useful if you have to go fast") |
+| 20 | Fossilized Fish | Accessory: +15 % all status resistances, +25 Luck |
+| 30 | Flying Mushroom Fossil | Accessory: launches you up to 20 m into the air, 34 s recharge; unlocks *Oh the Places You'll Go* |
+| 40 | Fossilized Anemone | Accessory: pit immunity (saves you from deadly falls and water) |
+| 50 | Sonic Crystal Fossil | Accessory: 2× movement speed |
 | 69 | Ritual | *The Call From Beyond*; required for Ending 4 (Eat) |
 
 The door's lines after each reward hint at them: "Quaaaack…", "still freshhhh…", "Boingggg… upppp youuuu gooooo…",
 "Swimmm… freeee…", "gotttta goooo…. faaasssssstttt…".
 
-The Skull Charm (Umbada, 20 coins) tracks skulls on the Mask of Second Sight. The reward fossils are artifacts and
-don't count toward the 33 accessories. For per-skull locations use
+The Skull Charm (Umbada, 20 coins) tracks skulls on the Mask of Second Sight. All four fossils are tagged
+`AchievementAccessory`, so they count toward the 33 accessories (Eclectic Accoutrements). For per-skull locations use
 [Queen's Domain Skull Finder](https://github.com/mesetamusic/queens-domain-skull-finder).
 
 ## Umbada's shop and the duck figurines

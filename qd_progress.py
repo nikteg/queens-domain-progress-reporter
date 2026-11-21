@@ -24,7 +24,7 @@ import gvas
 import qdcore
 
 CACHE_FILE = os.path.join(qdcore.APP_DIR.replace("QDSkullFinder", "QDProgress"), "gamedata.json")
-CACHE_VERSION = 1
+CACHE_VERSION = 2
 
 # ------------------------------------------------------------------ challenges
 # Taken from the game's own definition table (Blueprints/Challenges/FS_ChallengeData).
@@ -98,7 +98,9 @@ TREASURE_CAT = "ItemCategory::NewEnumerator7"
 def scan_items(pak, strings):
     items = []
     for k in pak.files:
-        if not (k.startswith("QueensDomain/Content/Items/") and k.endswith(".uasset")): continue
+        # Artifacts/ holds the skull-door fossils, which are accessories too
+        if not (k.startswith(("QueensDomain/Content/Items/", "QueensDomain/Content/Artifacts/"))
+                and k.endswith(".uasset")): continue
         ua = pak.read(k)
         if b"Item Description" not in ua: continue
         try:
@@ -304,12 +306,12 @@ def main():
         uniq = [it for it in game["items"] if it["cat"] == TREASURE_CAT and not it["tags"]
                 and not it["path"].endswith("/Coin")]
         got = [it for it in uniq if it["path"] in inv]
-        sacks_total = 93 - len(uniq)
         print(line("  unique treasures", len(got), len(uniq)))
-        print(line("  loot sacks (Lizer treasures)", int(nsd.get("TotalLizerTreasures", 0)), sacks_total))
+        # every loot sack counts toward the 93, and they can drop repeatedly, so there's no fixed total
+        print(f"    loot sacks found: {int(nsd.get('TotalLizerTreasures', 0))} (each one counts toward the 93)")
         missing = [it["name"] for it in uniq if it["path"] not in inv]
         if missing:
-            print(f"      missing {len(missing)} unique treasures:")
+            print(f"      missing {len(missing)} unique treasures (any {93 - have_t} more treasures or sacks finish it):")
             show_list(missing, args.all)
 
     print(line("Weapons upgraded", int(nsd.get("TotalWeaponsUpgraded", 0)), 63))

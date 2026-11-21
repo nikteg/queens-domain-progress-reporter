@@ -118,18 +118,22 @@ Collections
       - Paralytic Needle
       - Spiked Ball
   Accessories                        ████████████████░░░░░░░░    22/33     66.7%
-      missing 7:
+      missing 11:
       - Agate Link Charm
       - Crown of the Sea King
       - Extravagant Hourglass
+      - Flying Mushroom Fossil
+      - Fossilized Anemone
+      - Fossilized Fish
       - Growth Apparatus
       - Orbewa Holy Amulet
       - Quick Charger
+      - Sonic Crystal Fossil
       - White Quartz Charm
   Treasures (incl. loot sacks)       █████████████████░░░░░░░    67/93     72.0%
     unique treasures                 ████████████████░░░░░░░░    40/59     67.8%
-    loot sacks (Lizer treasures)     ███████████████████░░░░░    27/34     79.4%
-      missing 19 unique treasures:
+    loot sacks found: 27 (each one counts toward the 93)
+      missing 19 unique treasures (any 26 more treasures or sacks finish it):
       - Ancient Green Bottle
       - Ancient Yellow Bottle
       - Cell Phone
@@ -218,7 +222,7 @@ Stats
 
 - [Completion reference](docs/completion-reference.md) — all 53 achievements, collection totals, Silver Skull rewards, Umbada's shop tiers
 - [Consumables and status effects](docs/consumables-and-status-effects.md) — heal amounts, buffs, status debuffs and cures
-- [Save file and game data notes](docs/save-and-game-data-notes.md) — save keys and .pak assets the analyzer reads
+- [Save file and game data notes](docs/save-and-game-data-notes.md) — save keys and .pak assets the analyzer reads, plus how level coordinates map to the in-game compass
 
 ## Files
 
