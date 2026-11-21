@@ -93,20 +93,19 @@ TOTAL_SKULLS = qdcore.TOTAL_SKULLS
 TAG_WEAPON, TAG_ACC, TAG_THROW = "ItemTags.AchievementWeapon", "ItemTags.AchievementAccessory", "ItemTags.AchievementThrowables"
 TREASURE_CAT = "ItemCategory::NewEnumerator7"
 
-# Lost books for "I'm Not Paying the Late Fee": (asset id, shelf, name, where the pickup is).
-# Shelves are LIB_BookRecepticle_BP actors in 300_LIB (10 slots) and 760_SZ_AUT (4 slots). Six Tower slots name
-# their book; the other four don't, and the four books left over are assumed to go there.
+# Lost books for "I'm Not Paying the Late Fee": (asset id, shelf, name, where to find it).
+# The Tower shelf takes six books (slots I-VI in 300_LIB name their book via SpecifiedKeys) and opens Rare Artifact
+# Storage; the Record of Sin shelf in 760_SZ_AUT takes the four god books. The other Tower book slots are door
+# puzzles, and the other BookKey items (Ratty Bugs, War History, Bone Machines, Cook Book) aren't part of it.
 LOST_BOOKS = [
-    ("Alchemy", "Tower", "The Great Work IV - Rubedo", "Isle of Neasied, Cube Hall: 26 m ENE of Cemetery Precipice, 13 m down"),
-    ("Dragons", "Tower", "The History of Dragons", "Tower of Knowledge (not a placed pickup)"),
-    ("DamsAndWeirs", "Tower", "Dams and Weirs", "Tower of Knowledge: 21 m SE of the Wing Altar, same height"),
-    ("FairyTales", "Tower", "Upim's Fairy Tales", "level 710_SZ_AQ"),
-    ("Eldritch", "Tower", "The Old Ones Beyond", "Tower of Knowledge (not a placed pickup)"),
-    ("QueerRomance", "Tower", "Koko's Sapphic Adventure", "Tower of Knowledge: 32 m ENE of the Wing Altar, same height"),
-    ("WarHistory", "Tower", "The End of Epha", "Tower of Knowledge"),
-    ("RattyBugs", "Tower", "Ratty Bug Compendium", "Isle of Neasied"),
-    ("BoneMachines", "Tower", "Bone Machines", "Deimpo Mausoleum, dark maze"),
-    ("CookBook", "Tower", "How to Serve Humans", "Deimpo Mausoleum, dark maze"),
+    ("Alchemy", "Tower", "The Great Work IV - Rubedo",
+     "cave below the Cemetery (entrance with an egg), altar right of the cube pedestal; 26 m ENE of Cemetery Precipice, 13 m down"),
+    ("Dragons", "Tower", "The History of Dragons", "reward from Wourha for bestiary progress"),
+    ("DamsAndWeirs", "Tower", "Dams and Weirs", "bottom of the bookcase next to the Tower of Knowledge Wing Altar"),
+    ("FairyTales", "Tower", "Upim's Fairy Tales",
+     "hidden cave on the Obmuer Temple side; drop toward the giant tree, Wind Dash to the ledge with a skeleton"),
+    ("Eldritch", "Tower", "The Old Ones Beyond", "hidden passage above an upper library room door (Archivist Inha's bones)"),
+    ("QueerRomance", "Tower", "Koko's Sapphic Adventure", "upper Tower room near Wourha; 32 m ENE of the Wing Altar"),
     ("Wodaso", "Record of Sin", "Wodaso's Embrace", "Tower of Knowledge: 26 m WSW of Forbidden Archives, 46 m down"),
     ("Jigeki", "Record of Sin", "The Rotting God", "level 210_AQ_underground"),
     ("Puwema", "Record of Sin", "The Green Goddess", "level 750_SZ_MAUS2"),

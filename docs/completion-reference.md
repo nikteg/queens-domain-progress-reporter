@@ -123,26 +123,29 @@ any mix of unique treasures and sacks.
 
 ## Lost books (I'm Not Paying the Late Fee)
 
-14 book items (`Items/KeyItems/BookKeys/*`) go on two shelves of `LIB_BookRecepticle_BP` slots. Filling a shelf sets
-`LibBookPuzzleComplete` or `ROSBookPuzzleComplete`. Six of the ten Tower slots name their book (`SpecifiedKeys`); the
-other four don't, so the four remaining books are assumed to go there.
+Two shelves of `LIB_BookRecepticle_BP` slots. Filling one sets `LibBookPuzzleComplete` or `ROSBookPuzzleComplete`.
 
-| Book | Shelf | Pickup placed in |
+- **Tower of Knowledge shelf (6 books, slots I–VI):** each slot names its book (`SpecifiedKeys`). Filling it opens Rare
+  Artifact Storage.
+- **Record of Sin shelf (4 god books)** in `760_SZ_AUT`.
+
+The Tower has four more book slots that work door puzzles, and four more book items (Ratty Bug Compendium, The End of
+Epha, Bone Machines, How to Serve Humans) that are not part of the achievement.
+
+| Book | Shelf | Where |
 | --- | --- | --- |
-| The Great Work IV - Rubedo | Tower | Isle of Neasied, Cube Hall (`125_GR_CubeHall`): 26 m ENE of Cemetery Precipice, 13 m down |
-| The History of Dragons | Tower | no placed pickup found (given or dropped) |
-| Dams and Weirs | Tower | Tower of Knowledge: 21 m SE of the Wing Altar, same height |
-| Upim's Fairy Tales | Tower | `710_SZ_AQ` |
-| The Old Ones Beyond | Tower | no placed pickup found (given or dropped) |
-| Koko's Sapphic Adventure | Tower | Tower of Knowledge: 32 m ENE of the Wing Altar, same height |
-| The End of Epha | Tower | Tower of Knowledge |
-| Ratty Bug Compendium | Tower | Isle of Neasied (`100_GR`) |
-| Bone Machines | Tower | Deimpo Mausoleum dark maze (`450_MAUS_darkmaze`) |
-| How to Serve Humans | Tower | Deimpo Mausoleum dark maze (`450_MAUS_darkmaze`) |
-| Wodaso's Embrace | Record of Sin | Tower of Knowledge: 26 m WSW of Forbidden Archives, 46 m down |
+| The Great Work IV - Rubedo | Tower I (Alchemic Recipes) | Cave below the Cemetery on the starting island (entrance with an egg outside), on the altar right of the stone-cube pedestal. 26 m ENE of Cemetery Precipice, 13 m down. |
+| The History of Dragons | Tower II (Fantastical Creatures) | Reward from Wourha for bestiary progress |
+| Dams and Weirs | Tower III (Construction Techniques) | Bottom of the bookcase next to the Tower of Knowledge Wing Altar |
+| Upim's Fairy Tales | Tower IV (Fairy Tales) | Hidden cave on the Obmuer Temple side (3 air dashes to reach). Drop toward the giant tree and Wind Dash to the ledge with a skeleton. |
+| The Old Ones Beyond | Tower V (Eldritch Horror) | Hidden passage above an upper library room door, with Archivist Inha's bones |
+| Koko's Sapphic Adventure | Tower VI (Queer Romance) | Upper Tower room near Wourha, 32 m ENE of the Wing Altar |
+| Wodaso's Embrace | Record of Sin | Tower of Knowledge, 26 m WSW of Forbidden Archives, 46 m down |
 | The Rotting God | Record of Sin | `210_AQ_underground` |
 | The Green Goddess | Record of Sin | `750_SZ_MAUS2` |
 | Monarch of the Void | Record of Sin | `720_SZ_LIB` |
+
+Walkthrough details are from the [Whisper of the House missing books guide](https://www.whisperofthehouse.com/queens-domain/missing-books). Distances are from the game files.
 
 ## Silver Skulls
 

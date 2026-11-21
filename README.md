@@ -158,12 +158,12 @@ Collections
   Raider necklaces (Aganmi)          ████████████████████████     4/4     100.0%
   Bestiary % (Wourha)                ████████████████████░░░░    82/100    82.0%
   Coins spent at Umbada              ████████████████████████  1000/1000  100.0%  (total spent 1,381)
-  Lost books: Tower shelf            ████████████░░░░░░░░░░░░     5/10     50.0%
-      - Dams and Weirs — Tower of Knowledge: 21 m SE of the Wing Altar, same height
-      - Koko's Sapphic Adventure — Tower of Knowledge: 32 m ENE of the Wing Altar, same height
-      - The Great Work IV - Rubedo — Isle of Neasied, Cube Hall: 26 m ENE of Cemetery Precipice, 13 m down
-      - The Old Ones Beyond — Tower of Knowledge (not a placed pickup)
-      - Upim's Fairy Tales — level 710_SZ_AQ
+  Lost books: Tower shelf            ████░░░░░░░░░░░░░░░░░░░░     1/6      16.7%
+      - Dams and Weirs — bottom of the bookcase next to the Tower of Knowledge Wing Altar
+      - Koko's Sapphic Adventure — upper Tower room near Wourha; 32 m ENE of the Wing Altar
+      - The Great Work IV - Rubedo — cave below the Cemetery (entrance with an egg), altar right of the cube pedestal; 26 m ENE of Cemetery Precipice, 13 m down
+      - The Old Ones Beyond — hidden passage above an upper library room door (Archivist Inha's bones)
+      - Upim's Fairy Tales — hidden cave on the Obmuer Temple side; drop toward the giant tree, Wind Dash to the ledge with a skeleton
   Lost books: Record of Sin shelf    ██████████████████░░░░░░     3/4      75.0%
       - Wodaso's Embrace — Tower of Knowledge: 26 m WSW of Forbidden Archives, 46 m down
 
