@@ -311,7 +311,11 @@ def main():
         print(f"    loot sacks found: {int(nsd.get('TotalLizerTreasures', 0))} (each one counts toward the 93)")
         missing = [it["name"] for it in uniq if it["path"] not in inv]
         if missing:
-            print(f"      missing {len(missing)} unique treasures (any {93 - have_t} more treasures or sacks finish it):")
+            if have_t >= 93:
+                note = "not needed, the achievement is complete"
+            else:
+                note = f"any {93 - have_t} more treasures or sacks finish it"
+            print(f"      missing {len(missing)} unique treasures ({note}):")
             show_list(missing, args.all)
 
     print(line("Weapons upgraded", int(nsd.get("TotalWeaponsUpgraded", 0)), 63))
