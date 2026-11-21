@@ -1,7 +1,7 @@
 # Queen's Domain progress analyzer
 
 Reads a Queen's Domain save and prints your completion: all 53 achievements/challenges,
-item collections (with what's missing), Crystal Monuments / Wing Altars, Silver Skulls and some stats.
+item collections (with what's missing), lost books, Crystal Monuments / Wing Altars, Silver Skulls and some stats.
 
 ```
 python qd_progress.py                      # newest save in %LOCALAPPDATA%\QueensDomain\Saved\SaveGames
@@ -158,6 +158,14 @@ Collections
   Raider necklaces (Aganmi)          ████████████████████████     4/4     100.0%
   Bestiary % (Wourha)                ████████████████████░░░░    82/100    82.0%
   Coins spent at Umbada              ████████████████████████  1000/1000  100.0%  (total spent 1,381)
+  Lost books: Tower shelf            ████████████░░░░░░░░░░░░     5/10     50.0%
+      - Dams and Weirs — Tower of Knowledge: 21 m SE of the Wing Altar, same height
+      - Koko's Sapphic Adventure — Tower of Knowledge: 32 m ENE of the Wing Altar, same height
+      - The Great Work IV - Rubedo — Isle of Neasied, Cube Hall: 26 m ENE of Cemetery Precipice, 13 m down
+      - The Old Ones Beyond — Tower of Knowledge (not a placed pickup)
+      - Upim's Fairy Tales — level 710_SZ_AQ
+  Lost books: Record of Sin shelf    ██████████████████░░░░░░     3/4      75.0%
+      - Wodaso's Embrace — Tower of Knowledge: 26 m WSW of Forbidden Archives, 46 m down
 
 Exploration
 ───────────
@@ -220,7 +228,7 @@ Stats
 
 ## Docs
 
-- [Completion reference](docs/completion-reference.md) — all 53 achievements, collection totals, Silver Skull rewards, Umbada's shop tiers
+- [Completion reference](docs/completion-reference.md) — all 53 achievements, collection totals, Silver Skull rewards, lost books, Umbada's shop tiers
 - [Consumables and status effects](docs/consumables-and-status-effects.md) — heal amounts, buffs, status debuffs and cures
 - [Save file and game data notes](docs/save-and-game-data-notes.md) — save keys and .pak assets the analyzer reads, plus how level coordinates map to the in-game compass
 

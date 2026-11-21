@@ -93,6 +93,26 @@ TOTAL_SKULLS = qdcore.TOTAL_SKULLS
 TAG_WEAPON, TAG_ACC, TAG_THROW = "ItemTags.AchievementWeapon", "ItemTags.AchievementAccessory", "ItemTags.AchievementThrowables"
 TREASURE_CAT = "ItemCategory::NewEnumerator7"
 
+# Lost books for "I'm Not Paying the Late Fee": (asset id, shelf, name, where the pickup is).
+# Shelves are LIB_BookRecepticle_BP actors in 300_LIB (10 slots) and 760_SZ_AUT (4 slots). Six Tower slots name
+# their book; the other four don't, and the four books left over are assumed to go there.
+LOST_BOOKS = [
+    ("Alchemy", "Tower", "The Great Work IV - Rubedo", "Isle of Neasied, Cube Hall: 26 m ENE of Cemetery Precipice, 13 m down"),
+    ("Dragons", "Tower", "The History of Dragons", "Tower of Knowledge (not a placed pickup)"),
+    ("DamsAndWeirs", "Tower", "Dams and Weirs", "Tower of Knowledge: 21 m SE of the Wing Altar, same height"),
+    ("FairyTales", "Tower", "Upim's Fairy Tales", "level 710_SZ_AQ"),
+    ("Eldritch", "Tower", "The Old Ones Beyond", "Tower of Knowledge (not a placed pickup)"),
+    ("QueerRomance", "Tower", "Koko's Sapphic Adventure", "Tower of Knowledge: 32 m ENE of the Wing Altar, same height"),
+    ("WarHistory", "Tower", "The End of Epha", "Tower of Knowledge"),
+    ("RattyBugs", "Tower", "Ratty Bug Compendium", "Isle of Neasied"),
+    ("BoneMachines", "Tower", "Bone Machines", "Deimpo Mausoleum, dark maze"),
+    ("CookBook", "Tower", "How to Serve Humans", "Deimpo Mausoleum, dark maze"),
+    ("Wodaso", "Record of Sin", "Wodaso's Embrace", "Tower of Knowledge: 26 m WSW of Forbidden Archives, 46 m down"),
+    ("Jigeki", "Record of Sin", "The Rotting God", "level 210_AQ_underground"),
+    ("Puwema", "Record of Sin", "The Green Goddess", "level 750_SZ_MAUS2"),
+    ("Sipeha", "Record of Sin", "Monarch of the Void", "level 720_SZ_LIB"),
+]
+
 
 # ------------------------------------------------------------------ game data (from the .pak)
 def scan_items(pak, strings):
@@ -332,6 +352,14 @@ def main():
     print(line("Bestiary % (Wourha)", int(nsd.get("LibrarianBestiaryCompletionPercent", 0)), 100))
     print(line("Coins spent at Umbada", min(1000, int(nsd.get("ShopAmountSpent", 0))), 1000,
                f"(total spent {int(nsd.get('ShopAmountSpent', 0)):,})"))
+
+    for shelf, done_key in (("Tower", "LibBookPuzzleComplete"), ("Record of Sin", "ROSBookPuzzleComplete")):
+        books = [b for b in LOST_BOOKS if b[1] == shelf]
+        done = nsd.get(done_key, 0) > 0
+        got = [b for b in books if done or f"BookKey_00_{b[0]}_Item" in inv_names]
+        print(line(f"Lost books: {shelf} shelf", len(got), len(books), "(shelf done)" if done else ""))
+        missing = [f"{b[2]} — {b[3]}" for b in books if b not in got]
+        if missing: show_list(missing, True)
 
     # ---------------------------------------------------------- exploration
     header("Exploration")

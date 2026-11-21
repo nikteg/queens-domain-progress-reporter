@@ -44,6 +44,7 @@ Location: `%LOCALAPPDATA%\QueensDomain\Saved\SaveGames\<SteamID>\`. All are UE4 
 | `TotalLizerTreasures` | Loot sacks found; no fixed total, each one also adds to `TotalAchievementTreasures` |
 | `NecroWall00–04Destroyed` | Tower flesh walls |
 | `SR_*_Acquired` | Treasure vaults (5) |
+| `LibBookPuzzleComplete`, `ROSBookPuzzleComplete` | Lost-book shelves done; books in hand show in `InventoryContents` as `BookKey_00_*_Item` |
 | `*Dead`, `*IsDead`, `*Defeated`, `DemonBossesKilled` | Boss kills |
 | `Ending1–4Complete` | Endings seen |
 | `ReadNote_*` | Notes and books read |

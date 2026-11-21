@@ -121,6 +121,29 @@ any mix of unique treasures and sacks.
 | Petrified Garden | Stone Hut | yes |
 | Record of Sin | Before Okbujo's Tree, Pinnacle Anteroom | yes |
 
+## Lost books (I'm Not Paying the Late Fee)
+
+14 book items (`Items/KeyItems/BookKeys/*`) go on two shelves of `LIB_BookRecepticle_BP` slots. Filling a shelf sets
+`LibBookPuzzleComplete` or `ROSBookPuzzleComplete`. Six of the ten Tower slots name their book (`SpecifiedKeys`); the
+other four don't, so the four remaining books are assumed to go there.
+
+| Book | Shelf | Pickup placed in |
+| --- | --- | --- |
+| The Great Work IV - Rubedo | Tower | Isle of Neasied, Cube Hall (`125_GR_CubeHall`): 26 m ENE of Cemetery Precipice, 13 m down |
+| The History of Dragons | Tower | no placed pickup found (given or dropped) |
+| Dams and Weirs | Tower | Tower of Knowledge: 21 m SE of the Wing Altar, same height |
+| Upim's Fairy Tales | Tower | `710_SZ_AQ` |
+| The Old Ones Beyond | Tower | no placed pickup found (given or dropped) |
+| Koko's Sapphic Adventure | Tower | Tower of Knowledge: 32 m ENE of the Wing Altar, same height |
+| The End of Epha | Tower | Tower of Knowledge |
+| Ratty Bug Compendium | Tower | Isle of Neasied (`100_GR`) |
+| Bone Machines | Tower | Deimpo Mausoleum dark maze (`450_MAUS_darkmaze`) |
+| How to Serve Humans | Tower | Deimpo Mausoleum dark maze (`450_MAUS_darkmaze`) |
+| Wodaso's Embrace | Record of Sin | Tower of Knowledge: 26 m WSW of Forbidden Archives, 46 m down |
+| The Rotting God | Record of Sin | `210_AQ_underground` |
+| The Green Goddess | Record of Sin | `750_SZ_MAUS2` |
+| Monarch of the Void | Record of Sin | `720_SZ_LIB` |
+
 ## Silver Skulls
 
 There are **69** Strange Silver Etched Skulls. You turn them in at the skull door, which pays out every 10 and starts
